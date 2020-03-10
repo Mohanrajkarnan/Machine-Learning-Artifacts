@@ -1,2 +1,36 @@
-BEST OUTLIER EXAMPLE = https://www.statisticshowto.datasciencecentral.com/find-outliers/
-What to do with outliers - https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/
+Outliers
+=========
+
+- Know the value of 1st quartile(25%) and 2nd quartile(50%) and 3rd quartile(75%)
+- Find IQR = Q3(Values) - Q1(Values)
+- Q1-(1.5 *IQR) for left (any value lesser than <-- is outlier)
+- Q3+(1.5 * IQR) for right (any value greater than <-- is outlier)
+
+Correlation
+================
+
+-1   -0.25   0    0.25    1
+
+From -0.25 to +0.25 is not intrested
+From -0.25 to -1 is intrested
+From +0.25 to +1 is intrested
+
+
+RFE Rankings
+============
+
+x= Columns
+y = Target column
+call LinearRegression()
+Call RFE method:
+	rfemod = RFE(lmmod,1)
+Train the model:
+	rfemod.fit(x,y)
+Make Ranking:
+	rankingdf = pd.DataFrame(rfemod.ranking_).T
+	rankingdf.columns = x.columns
+	rankingdf
+
+
+-BEST OUTLIER EXAMPLE = https://www.statisticshowto.datasciencecentral.com/find-outliers/
+-What to do with outliers - https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/
