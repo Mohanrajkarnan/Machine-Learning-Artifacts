@@ -1,15 +1,13 @@
 Classifier questions
 =========================
-how to check correlation for if categorical variable as target
-how to select input variable in DecisionTreeClassifier
+how to check correlation for if categorical variable as target - Karthick
+Multiocolinerity - Omai
 
 
 Regression questions
 =======================
-Do we need to find outliers for every Input variables? - yes
-After we found outliers what course of action should do ? - find correlation between target variables to input variables
-how to select series based on correlation ?
-
+What would be maxium number acceptable which between actual and predicted ?
+does precision and recall applies in regression ?
 
 
 
